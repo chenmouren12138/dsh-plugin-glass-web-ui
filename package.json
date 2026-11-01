@@ -1,0 +1,56 @@
+{
+  "name": "@local/glass-liquid",
+  "version": "1.0.0",
+  "description": "Liquid-glass particle field for the DeepSeek Harness Web UI: an atmosphere layer over the whole app (multi-colour light pools, drifting orbs, grid, pointer specular) plus a pushable particle lattice on the grid intersections, and optional translucent shell surfaces through the official theme.overrideTokens API.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "liquid-glass",
+    "particles"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout"
+      ]
+    }
+  },
+  "homepage": "https://github.com/<your-name>/dsh-glass-liquid",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<your-name>/dsh-glass-liquid.git"
+  },
+  "bugs": {
+    "url": "https://github.com/<your-name>/dsh-glass-liquid/issues"
+  },
+  "scripts": {
+    "test": "node tests/run.mjs"
+  }
+}

@@ -1,0 +1,28 @@
+# @local/glass-liquid bundle patch.
+#
+# One row inserts the Host half. The Host half is inert (no Service, Tool, Event
+# or timer): all rendering happens in the browser half, which `dsh.client` in
+# package.json makes the Web app load.
+#
+# These values only seed the defaults on first run — the Settings page then writes
+# live values to localStorage, and those survive restarts.
+- insert:
+    - id: glass-liquid
+      name: '@local/glass-liquid'
+      config:
+        accent: '#8f7bff'
+        accent2: '#5fd4e6'
+        accent3: '#ff9fb8'
+        glow: 0.3
+        grid: 0.1
+        specular: 0.18
+        orbSpeed: 26
+        surface: 0
+        titlebar: true
+        sub: 3
+        dotSize: 1
+        dotAlpha: 0.45
+        radius: 150
+        push: 2.5
+        damping: 0.98
+        pointer: true
